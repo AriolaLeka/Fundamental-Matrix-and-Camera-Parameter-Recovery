@@ -35,63 +35,16 @@ pip install numpy opencv-python
 ### Usage
 
 1. Clone this repository to your local machine:
-   git clone https://github.com/AriolaLeka/Fundamental-Matrix-and-Camera-Parameter-Recovery.git
 
-2. 
-Certainly! Here's a README file for your GitHub repository based on your paper reproducibility project:
+git clone https://github.com/AriolaLeka/Fundamental-Matrix-and-Camera-Parameter-Recovery.git
 
-markdown
-Copy code
-# GMAN: A Graph Multi-Attention Network for Traffic Prediction - Reproducibility Project
+2. Navigate to the project directory:
 
-This repository contains the code and materials for a reproducibility project of the paper titled "GMAN: A Graph Multi-Attention Network for Traffic Prediction." The goal of this project is to reproduce the key findings and results from the original paper to validate its claims and explore its effectiveness in traffic prediction.
+cd Fundamental-Matrix-and-Camera-Parameter-Recovery/Matrix-Camera Recovery.ipynb
 
-## Paper Overview
+## Results
+The estimated fundamental matrix (F), camera parameters (P, P'), 3D coordinates (Xˆi), homography matrix (H), and final world coordinates (Yj) can be found in the results.txt/ directory.
 
-- **Title**: GMAN: A Graph Multi-Attention Network for Traffic Prediction
-- **Authors**: [Author Names]
-- **Published Year**: [Year]
-- **Original Paper Link**: [Link to Original Paper]
+## Acknowledgement
 
-## Reproducibility Objectives
-
-- Replicate the experiments and results presented in the original paper.
-- Verify the effectiveness of the GMAN model for traffic prediction.
-- Explore any potential improvements or variations in the model.
-
-## Repository Structure
-
-- `data/`: Contains the dataset used for the reproducibility project.
-- `code/`: Contains the code for training and evaluating the GMAN model.
-- `results/`: Stores the results, including model checkpoints and evaluation metrics.
-- `docs/`: Documentation or additional resources related to the project.
-
-## Getting Started
-
-### Prerequisites
-
-Ensure you have the following dependencies installed:
-
-- [Python](https://www.python.org/)
-- [PyTorch](https://pytorch.org/)
-- [NumPy](https://numpy.org/)
-- [Pandas](https://pandas.pydata.org/)
-- [Matplotlib](https://matplotlib.org/)
-- [Other dependencies as specified in `requirements.txt`]
-
-You can install the required Python packages using pip:
-
-pip install -r requirements.txt
-
-bash
-Copy code
-
-### Usage
-
-1. Clone this repository to your local machine:
-
-git clone https://github.com/your-username/gman-reproducibility.git
-
-2. Navigate to the project directory:\
-
-cd Fundamental-Matrix-and-Camera-Parameter-Recovery/
+This project was done in collaboration with Shega Likaj and Francisco AMoros Cubells.
