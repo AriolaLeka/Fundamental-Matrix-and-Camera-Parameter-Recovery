@@ -47,4 +47,4 @@ The estimated fundamental matrix (F), camera parameters (P, P'), 3D coordinates 
 
 ## Acknowledgement
 
-This project was done in collaboration with Shega Likaj and Francisco AMoros Cubells.
+This project was done in collaboration with Shega Likaj and Francisco Amoros Cubells.
