@@ -1,0 +1,65 @@
+Ariola Leka
+Shega Likaj
+Francisco Amoros Cubells
+
+
+---- Point 1 ------
+
+1. We obtain the 10 points from house one and house 2,
+	and the world coordinates.
+2. We use the 8-point algorithm in order to calculate 
+	the fundamental matrix prime.(F prime)
+	- obtain the A matrix and apply SVD to get the last column and get the F.
+	- in order to get the F prime, we apply SVD to F and remove the last column of D to create the F prime, with the conditions stated on the slides.
+3. We check that the difference between F and F prime matrix has a low norm.
+4. Finally we check that the x'Fx = 0
+
+Fundamental Matrix :
+
+[[ 8.02338400e-07  1.62719225e-06 -2.82774603e-03]
+ [-9.23174966e-06 -1.74627511e-06  2.33948515e-02]
+ [ 5.09047041e-03 -2.11376345e-02 -9.99485854e-01]]
+
+---- Point 2 ------
+
+
+
+---- Point 3 ------
+
+1. We set x,y,z as the real true words and x_hat, y_hat, z_hat as the estimated points from the triangulation step.
+2. Construct matrix Ai (3x16) that represents the linear equation for the current data point.
+3. Use SVD to take the homography matrix and take actually the last column of it as the last column of it and reshape it in a 4 by 4 matrix.
+
+Estimated Homography:
+
+[[-6.45069913e-04  3.64841572e-04 -1.22137520e-03  2.81263013e-03]
+ [-1.12466814e-03  1.36870734e-04 -1.32804070e-03  2.63874362e-03]
+ [-3.46068256e-06  4.70995791e-07 -3.09133629e-06  6.99774908e-06]
+ [-3.35645642e-01  1.24506358e-01 -3.71082596e-01  8.56806813e-01]]
+
+---- Point 4 ------
+
+1. After having all the setup together from the prior steps, now from the formulas from the slides where the correct camera pair being the dot product between the P from the canonical camera and the inverse matrix of homography that we calculated in the upper steps.
+2. Same for the correct camera p prime but now being the dot product of p prime from the canonical camera and homography inverse.
+3. Finally, using the triangulation function, we find the 5 world coordinates.
+
+correct camera p: 
+ [[ 1.93420293e+03  2.01640778e+01 -1.64566710e+05 -5.06743022e+00]
+ [-2.86740433e+03  6.73689330e+02 -1.90575867e+06  2.29028003e+01]
+ [ 2.86761098e+03 -6.30635326e+03  2.61814243e+06 -1.13745401e+01]]
+------
+correct camera p prime: 
+ [[-5.17878351e+06  1.16524317e+07 -4.77521860e+09  2.01153826e+04]
+ [ 4.18771615e+07 -9.42037041e+07  3.86066418e+10 -1.62656284e+05]
+ [ 1.01975147e+06 -2.24303587e+06  9.31286921e+08 -4.04560186e+03]]
+------
+
+World coordinates:
+[[3.28381978e-03 3.07817226e-03 8.16222850e-06]
+ [3.28440601e-03 3.07843204e-03 8.16221136e-06]
+ [3.28446075e-03 3.07824112e-03 8.16169134e-06]
+ [3.28491939e-03 3.07858049e-03 8.16200539e-06]
+ [3.28545412e-03 3.07850277e-03 8.16123344e-06]] 
+
+
+
